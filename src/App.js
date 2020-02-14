@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Counter from './Counter';
+import AddCounter from './AddCounter';
+import RemoveCounter from './RemoveCounter';
+// import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="container">
+            <Counter></Counter><br />
+            <div className="columns">
+                <div className="column is-11">
+                    <AddCounter></AddCounter>
+                </div>
+                <div className="column auto">
+                    <RemoveCounter></RemoveCounter>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }
